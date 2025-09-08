@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Reference Hub and Support Links</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #0066cc;
+            margin: 0;
+            font-size: 24px;
+        }
+        .meeting-summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #0066cc;
+        }
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .link-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .link-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 2px 8px rgba(0,102,204,0.15);
+        }
+        .link-card h3 {
+            margin: 0 0 8px 0;
+            color: #0066cc;
+            font-size: 16px;
+        }
+        .link-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .emergency-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .emergency-box h3 {
+            color: #856404;
+            margin: 0 0 10px 0;
+        }
+        .contact-section {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 25px 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .contact-item {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #0066cc;
+        }
+        .contact-item h4 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            color: #0066cc;
+        }
+        .contact-item p {
+            margin: 0;
+            font-size: 13px;
+        }
+        .footer {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 10px 15px 0;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #0052a3;
+            color: white;
+        }
+        .collapsible {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .show-details {
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Workplace Reference Hub and Support Links </h1>
+            <p><strong> </strong><br>
+            Thank you for attending the Focus Connect session. Access your comprehensive reference guide for BDC14 workplace services.</p>
+        </div>
+
+        <div style="text-align: center; margin: 25px 0;">
+            <a href="https://forms.office.com/r/YBX1vtY1Sf?origin=lprLink" class="cta-button">📝 Share Your Feedback</a>
+        </div>
+
+        <h2 style="color: #0066cc; margin-bottom: 20px;">🔗 Quick Access Links</h2>
+        
+        <div class="quick-links">
+            <div class="link-card" onclick="toggleDetails('medical')">
+                <h3>🏥 Medical Services</h3>
+                <p>Doctor schedules & appointments</p>
+                <span class="show-details">Click for timings →</span>
+                <div id="medical" class="collapsible">
+                    <strong>Doctor Timings:</strong><br>
+                    • <strong>General Physician:</strong> Mon-Fri 11:30 AM - 1:30 PM<br>
+                    • <strong>Ergonomist:</strong> Tue & Thu 2:00 PM - 4:00 PM<br>
+                    • <strong>Gynaecologist:</strong> 1st Thu of month 10:00 AM - 12:00 PM
+                </div>
+            </div>
+
+            <div class="link-card" onclick="toggleDetails('parking')">
+                <h3>🚗 Parking & Transport</h3>
+                <p>Vehicle stickers & transport info</p>
+                <span class="show-details">Click for process →</span>
+                <div id="parking" class="collapsible">
+                    <strong>Parking Sticker Process:</strong><br>
+                    1. Go to <a href="https://support.accenture.com/support_portal?id=acn_service_catalog_dp&sys_id=d884516213dbbe0099f8dbf18144b001" style="color: #0066cc;">Accenture Support</a><br>
+                    2. Request > Transportation > Vehicle Parking Sticker<br>
+                    3. Fill attachment and submit
+                </div>
+            </div>
+
+            <div class="link-card" onclick="toggleDetails('gym')">
+                <h3>💪 Gymnasium Access</h3>
+                <p>Fitness facility registration</p>
+                <span class="show-details">Click for process →</span>
+                <div id="gym" class="collapsible">
+                    <strong>Gym Access Process:</strong><br>
+                    1. Go to <a href="https://support.accenture.com/support_portal?id=acn_service_catalog_dp&sys_id=d884516213dbbe0099f8dbf18144b001" style="color: #0066cc;">Accenture Support</a><br>
+                    2. Workplace Services > Access & Security<br>
+                    3. Gym/Fitness > Read Indemnity Waiver<br>
+                    4. Submit request
+                </div>
+            </div>
+
+            <div class="link-card" onclick="toggleDetails('seating')">
+                <h3>💺 Seat Booking</h3>
+                <p>Reserve workstations & meeting rooms</p>
+                <span class="show-details">Click for links →</span>
+                <div id="seating" class="collapsible">
+                    <strong>Booking Links:</strong><br>
+                    • <a href="https://acpindia-mobile.accenture.com/hoteling" style="color: #0066cc;">ACP Hoteling - My Desk</a> (Workstations)<br>
+                    • <a href="https://support-places.accenture.com/places" style="color: #0066cc;">Accenture Places</a> (Conference Rooms)<br>
+                    • <a href="https://support-places.accenture.com/places" style="color: #0066cc;">Accenture Places</a> (IES Cabins - Level 4+)<br>
+                    <strong>Issues?</strong> Contact: reservespace.in@accenture.com
+                </div>
+            </div>
+
+            <div class="link-card" onclick="toggleDetails('cafeteria')">
+                <h3>🍽️ Cafeteria Services</h3>
+                <p>Meal timings & locations</p>
+                <span class="show-details">Click for timings →</span>
+                <div id="cafeteria" class="collapsible">
+                    <strong>Locations:</strong> Ground Floor A&B, 5th Floor A<br>
+                    <strong>Meal Timings:</strong><br>
+                    • Breakfast: 8:00 AM - 11:00 AM<br>
+                    • Lunch: 12:30 PM - 3:00 PM<br>
+                    • Dinner: 7:30 PM - 10:00 PM<br>
+                    <em>Note: Tower B Ground Floor operates 24/7</em>
+                </div>
+            </div>
+
+            <div class="link-card" onclick="toggleDetails('idcard')">
+                <h3>🆔 ID Card Services</h3>
+                <p>New joiners & ID card requests</p>
+                <span class="show-details">Click for process →</span>
+                <div id="idcard" class="collapsible">
+                    <strong>ID Card Application:</strong><br>
+
+                    1. Visit portal <a href="https://support.accenture.com/support_portal?id=acn_service_catalog_dp&sys_id=d884516213dbbe0099f8dbf18144b001" style="color: #0066cc;">Accenture Support</a><br>
+
+                    2. Select Country/Location & Building<br>
+                    3. Choose ID Card > New ID card request<br>
+                    4. Upload white background photo<br>
+                    5. Submit request
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-box">
+            <h3>🚨 IMPORTANT: Updated ASOC Numbers</h3>
+            <p><strong>Emergency Support:</strong><br>
+            Primary: <strong>080 716 41777</strong> | Secondary: <strong>080 695 41777</strong><br>
+            <em>Please save these new numbers in your mobile</em></p>
+        </div>
+
+        <div class="contact-section">
+            <h3>📞 Your Support Team</h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>24/7 Duty Manager</h4>
+                    <p>bdc14.dutymanager@accenture.com<br>+91 74064 29558 +91 9513103569</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Client Experience</h4>
+                    <p>bdc14.cx@accenture.com<br>+91 7022650674</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Tech Support</h4>
+                    <p>bdc14.Tech.Shiftleads@accenture.com</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Transport</h4>
+                    <p>bdc14.transportshiftleads@accenture.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f0f8ff; padding: 15px; border-radius: 6px; margin: 20px 0;">
+            <h3 style="margin: 0 0 10px 0; color: #0066cc;">📋 Quick Reminders</h3>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Always wear ID cards on premises</li>
+                <li>Lock screens when leaving desk</li>
+                <li>Clear desk policy - no documents left unattended</li>
+                <li>Respect Accenture property</li>
+                <li>No photography in secured areas</li>
+                <li>Additional bags go to cloak room</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>For more updates: <a href="https://apps.powerapps.com/play/e/default-e0793d39-0939-496d-b129-198edd916feb/a/23fcea92-d8e5-4ddf-8720-8163dc103467?tenantId=e0793d39-0939-496d-b129-198edd916feb&hidenavbar=true" style="color: #0066cc;">India Workplace Digital - Power Apps</a></p>
+            <p style="margin: 5px 0 0 0;"><em>This email contains all essential information from your Bay Connect session.</em></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            const isVisible = element.style.display === 'block';
+            
+            // Hide all other collapsibles
+            const allCollapsibles = document.querySelectorAll('.collapsible');
+            allCollapsibles.forEach(el => el.style.display = 'none');
+            
+            // Toggle the clicked one
+            element.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
